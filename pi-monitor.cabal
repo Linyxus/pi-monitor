@@ -1,0 +1,93 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f9a175e4bbf7478a40a2fb892092aa85c430ad6e51241d8e0d6f4ddd80d9f02f
+
+name:           pi-monitor
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/pi-monitor#readme>
+homepage:       https://github.com/githubuser/pi-monitor#readme
+bug-reports:    https://github.com/githubuser/pi-monitor/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/pi-monitor
+
+library
+  exposed-modules:
+      FileDB.Table
+      Lib
+      Service.SMS.Context
+      Service.SMS.Handler
+      Service.SMS.Route
+  other-modules:
+      Paths_pi_monitor
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , directory
+    , scotty
+    , sort
+    , text
+    , time
+    , wai-extra
+  default-language: Haskell2010
+
+executable pi-monitor-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_pi_monitor
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , directory
+    , pi-monitor
+    , scotty
+    , sort
+    , text
+    , time
+    , wai-extra
+  default-language: Haskell2010
+
+test-suite pi-monitor-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_pi_monitor
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , directory
+    , pi-monitor
+    , scotty
+    , sort
+    , text
+    , time
+    , wai-extra
+  default-language: Haskell2010
