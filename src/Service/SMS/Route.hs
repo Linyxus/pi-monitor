@@ -10,10 +10,10 @@ routes :: SMSContext -> ScottyM ()
 routes ctxt = do
   let aliveDb = aliveTable ctxt
       msgDb = msgTable ctxt
-  get "/sms/hello" $ text "Hello"
-  post "/sms/alive" $ postAliveHandler aliveDb
-  get "/sms/alive" $ getAliveHandler aliveDb
-  post "/sms/message" $ do
+  get "/api/sms/hello" $ text "Hello"
+  post "/api/sms/alive" $ postAliveHandler aliveDb
+  get "/api/sms/alive" $ getAliveHandler aliveDb
+  post "/api/sms/message" $ do
     msg <- param "msg"
     postMessageHandler msgDb msg
-  get "/sms/message" $ getMessageHandler msgDb
+  get "/api/sms/message" $ getMessageHandler msgDb

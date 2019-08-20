@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f9a175e4bbf7478a40a2fb892092aa85c430ad6e51241d8e0d6f4ddd80d9f02f
+-- hash: 98b68c835e6ae9c8420f0eaa619df0cd993dbfa65c8cfabbec3422fd37c511b2
 
 name:           pi-monitor
 version:        0.1.0.0
@@ -32,6 +32,7 @@ library
       Service.SMS.Context
       Service.SMS.Handler
       Service.SMS.Route
+      Service.SMS.Types
   other-modules:
       Paths_pi_monitor
   hs-source-dirs:
