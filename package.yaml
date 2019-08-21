@@ -31,6 +31,8 @@ dependencies:
   - bytestring
   - directory
   - wai-cors
+  - wai
+  - http-types
 
 library:
   source-dirs: src

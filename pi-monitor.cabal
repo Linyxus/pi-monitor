@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8178e39a683091a423482cbb27c7e9a1a27eb691a16974a905418d6983a107a5
+-- hash: c12f4582519d4d97c22da5e141c8bc9b989a7dbca722963c78a3a33b4c93f069
 
 name:           pi-monitor
 version:        0.1.0.0
@@ -43,10 +43,12 @@ library
     , bytestring
     , containers
     , directory
+    , http-types
     , scotty
     , sort
     , text
     , time
+    , wai
     , wai-cors
     , wai-extra
   default-language: Haskell2010
@@ -64,11 +66,13 @@ executable pi-monitor-exe
     , bytestring
     , containers
     , directory
+    , http-types
     , pi-monitor
     , scotty
     , sort
     , text
     , time
+    , wai
     , wai-cors
     , wai-extra
   default-language: Haskell2010
@@ -87,11 +91,13 @@ test-suite pi-monitor-test
     , bytestring
     , containers
     , directory
+    , http-types
     , pi-monitor
     , scotty
     , sort
     , text
     , time
+    , wai
     , wai-cors
     , wai-extra
   default-language: Haskell2010
