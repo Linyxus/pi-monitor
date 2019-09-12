@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 65ebc9f2ec522fb686583155bc821c1d91c46288c4eed07a0af7efafdd5b8f8f
+-- hash: c12f4582519d4d97c22da5e141c8bc9b989a7dbca722963c78a3a33b4c93f069
 
 name:           pi-monitor
 version:        0.1.0.0
@@ -29,7 +29,6 @@ library
   exposed-modules:
       FileDB.Table
       Lib
-      Monad
       Service.SMS.Context
       Service.SMS.Handler
       Service.SMS.Route

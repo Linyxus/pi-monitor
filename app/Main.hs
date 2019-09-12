@@ -31,7 +31,7 @@ main = do
     middleware $ basicAuth (\_ _ -> return True) "My Realm" { authIsProtected = isNotOptionReq }
     -- middleware $ cors (const . pure $ corsPolicy )
     options (regex "^(.*)$") $ do
-      liftIO $ putStrLn "Options! Catch you!"
+      liftIO $ putStrLn "Options! Catch you!!"
       addHeader "Access-Control-Allow-Origin" "*"
       addHeader "Access-Control-Allow-Methods" "POST, GET, OPTIONS"
       addHeader "Access-Control-Allow-Headers" "*"
