@@ -4,6 +4,7 @@ COPY . /opt/build
 RUN cd /opt/build && stack build --system-ghc
 
 FROM ubuntu:16.04
+RUN mkdir -p /opt/app/db
 RUN mkdir -p /opt/app
 ARG BINARY_PATH
 WORKDIR /opt/app
